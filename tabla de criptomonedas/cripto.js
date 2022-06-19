@@ -1,4 +1,6 @@
 let endpoint = 'https://api.binance.com/api/v3/ticker/price'
+
+function verCotizacion(){
 fetch(endpoint)
     .then( respuesta => respuesta.json())
     .then( datos => mostrarData(datos))
@@ -12,4 +14,19 @@ const mostrarData = (data)=>{
     }
     document.getElementById('data').innerHTML = body
 }
-    
+}
+ 
+function descargarCotizacion(){ 
+    fetch(endpoint)
+    .then(response => response.json() )
+    .then(data =>{
+        var json= JSON.stringify(data);
+        var blob= new Blob([json], {type:'aplication/json'});
+        var url=URL.createObjectURL(blob);
+        var a= document.createElement('a');
+        a.href=url;
+        a.download = 'cripto.json';
+        a.click();
+    });
+}
+

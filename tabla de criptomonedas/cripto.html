@@ -4,23 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./cripto.css">
     <title>Document</title>
 </head>
 <body>  
-    <h2>Cotizaciones de Criptomonedas</h2>
-    <table class="tabla-css">
-        <thead>
-            <tr>
-                <th>Simbolo</th>
-                <th>Precio</th>
-            </tr>
-        </thead>
-        <tbody id="data">    
-        </tbody>
-    </table>
+    <div class="ITBANK-container"> 
+        <h1 class="h1">ITBANK</h1>
+        <button class= "boton-comprar"> Comprar</button>
+        <button class= "boton-vender"> Vender</button>
+      
+    </div>
+    <div class="table-container">
+        <div class="contizacion-container">
+            <h2 class="h2" >Cotizaciones de Criptomonedas</h2>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Simbolo</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="data">    
+                </tbody>
+            </table>
+          </div>
 
-    <script src="cripto.js"></script>
-
+            <button class= "boton-verCotizacion" onclick="verCotizacion()"> Actualizar cotizacion</button>
+            <button class= "boton-descargarCotizacion" onclick="descargarCotizacion()"> Descargar cotizacion</button>
+        <script src="cripto.js"></script>
+    </div>
 </body>
 </html>
+
